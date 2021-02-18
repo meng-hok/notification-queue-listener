@@ -1,5 +1,26 @@
 {
-	"port": 8080,
+	"port": 3333,
 	"bodyLimit": "100kb",
-	"corsHeaders": ["Link"]
+	"corsHeaders": ["Link"],
+	"amqpUrl": "amqp://192.168.178.241:5672",
+	"amqpUrlReal": "amqp://localhost:5672",
+	"fcmQueue": "pusher.queue.fcm",
+	"apnsQueue": "pusher.queue.apns",
+	"apnsDevQueue": "pusher.queue.apns-dev",
+	"devQueue": "pusher.dev.queue",
+	"transientQueue": "dev.transient.queue",
+	"data_base": {
+		"user": "kopushdbuser",
+		"pass": "kopushdbuser123",
+		"port": "5432",
+		"database": "kopushdbdev",
+		"host" : "192.168.178.241"
+	},
+	"data_base_real": {
+		"user": "kopushuser_real",
+		"pass": "K@SigNP@SH!!#",
+		"port": "5432",
+		"database": "kopushdb_real",
+		"host" : "localhost"
+	}
 }

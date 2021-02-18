@@ -18,3 +18,9 @@ export function toRes(res, status=200) {
 		res.status(status).json(thing);
 	};
 }
+
+export const debugDisplay = (title, value) => {
+	console.log(`\n======================================================${title}=============================================================`)
+	console.log(value)
+	console.log(`\n`)
+}

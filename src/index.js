@@ -6,7 +6,9 @@ import bodyParser from 'body-parser';
 import initializeDb from './db';
 import middleware from './middleware';
 import api from './api';
-import config from './config.json';
+import config, {amqpUrlReal as amqpUrl} from './config.json';
+import {queueConnectionOperation} from "./ampq";
+const amqplib = require('amqplib/callback_api');
 
 let app = express();
 app.server = http.createServer(app);
@@ -23,6 +25,13 @@ app.use(bodyParser.json({
 	limit : config.bodyLimit
 }));
 
+amqplib.connect(amqpUrl,(err , connection ) =>{
+	if (err) {
+		console.error(err.stack);
+		return process.exit(1);
+	}
+	queueConnectionOperation(err, connection)
+})
 // connect to db
 initializeDb( db => {
 
