@@ -24,3 +24,12 @@ export const debugDisplay = (title, value) => {
 	console.log(value)
 	console.log(`\n`)
 }
+
+export const getIfNull = (obj) => {
+	if(obj == undefined ) return null
+	return obj
+}
+export const getEmptyStringIfNull = (str) => {
+	if (getIfNull(str) == null ) str = ""
+	return str
+}

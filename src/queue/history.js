@@ -1,5 +1,5 @@
 import {pool} from "../db";
-import {debugDisplay} from "../lib/util";
+import {debugDisplay, getEmptyStringIfNull} from "../lib/util";
 
 
 export const saveHistory = async ({
@@ -32,8 +32,8 @@ export const getCommonHistory = (agentRequest, toPlatform) => {
         toPlatform: toPlatform ,
         count : 1,
         bulkId : bulkId,
-        badgeCount: badgeCount,
-        image : image,
+        badgeCount: getEmptyStringIfNull(badgeCount) ,
+        image : getEmptyStringIfNull(image),
         status : "true",
         responseMsg : "Success"
     }

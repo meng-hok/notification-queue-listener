@@ -44,7 +44,7 @@ export const queueConnectionOperation = (err , connection) => {
                 }).catch(err=> {
                     debugDisplay("APNS ERROR RESPONSE",err)
                     savedHistory.status = "false";
-                    savedHistory.responseMsg = err
+                    savedHistory.responseMsg = err.replace(/'/g, "''") || ""
 
                 }).finally(() => {
                     saveHistory(savedHistory)
@@ -68,7 +68,7 @@ export const queueConnectionOperation = (err , connection) => {
                 }).catch(err=> {
                     debugDisplay("FCM ERROR RESPONSE",err)
                     savedHistory.status = "false";
-                    savedHistory.responseMsg = err
+                    savedHistory.responseMsg = err.replace(/'/g, "''") || ""
 
                 }).finally(() => {
                     saveHistory(savedHistory)
