@@ -2,7 +2,8 @@ export default callback => {
 	// connect to a database if needed, then pass it to `callback`:
 	callback();
 }
-
+import "regenerator-runtime/runtime";
+import "core-js/stable";
 import { Pool }  from 'pg'
 import { data_base ,data_base_real , onDev }  from "./config.json"
 const database = onDev? data_base : data_base_real

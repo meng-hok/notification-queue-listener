@@ -9,8 +9,8 @@ import api from './api';
 import config, {amqpUrlReal ,amqpUrl , data_base, data_base_real, onDev} from './config.json';
 import {queueConnectionOperation} from "./ampq";
 const amqplib = require('amqplib/callback_api');
-
-
+import "regenerator-runtime/runtime";
+import "core-js/stable";
 let app = express();
 app.server = http.createServer(app);
 
