@@ -10,17 +10,17 @@
 	"devQueue": "pusher.dev.queue",
 	"transientQueue": "dev.transient.queue",
 	"data_base": {
-		"user": "kopushdbuser",
-		"pass": "kopushdbuser123",
-		"port": "5432",
-		"database": "kopushdbdev",
-		"host" : "192.168.178.241"
+		"user": "",
+		"pass": "",
+		"port": "",
+		"database": "",
+		"host" : ""
 	},
 	"data_base_real": {
-		"user": "kopushuser_real",
-		"pass": "K@SigNP@SH!!#",
+		"user": "",
+		"pass": "",
 		"port": "5432",
-		"database": "kopushdb_real",
+		"database": "",
 		"host" : "localhost"
 	},
 	"onDev": true
