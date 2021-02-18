@@ -22,5 +22,6 @@
 		"port": "5432",
 		"database": "kopushdb_real",
 		"host" : "localhost"
-	}
+	},
+	"onDev": true
 }

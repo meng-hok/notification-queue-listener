@@ -4,7 +4,8 @@ export default callback => {
 }
 
 import { Pool }  from 'pg'
-import { data_base as database }  from "./config.json"
+import { data_base ,data_base_real , onDev }  from "./config.json"
+const database = onDev? data_base : data_base_real
 const pool = new Pool({
 	user: database.user,
 	password: database.pass,
